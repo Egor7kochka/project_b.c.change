@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f8;
+    font-family: "Wittgenstein", italic;
+    flex-direction: column;
+}
+.container h2 {
+    background-color: #3b2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: 200;
+}
+.color {
+    color: #49a6e9;
+}
+.btn {
+    background-color: transparent;
+    padding: 8px;
+    border: 2px solid #3b2e2e;
+    border-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #3b2e2e;
+    outline: none;
+    cursor: pointer;
+}
+.container {
+    text-align: center;
+}
+.btn:hover {
+    background-color: #3b2e2e;
+    color: #ffffff;
+    transition: all 0.350s ease-in;
+}
