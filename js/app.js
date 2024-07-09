@@ -1,152 +1,10 @@
+import {Red, Pink, Orange, Yellow, Purple, Green, Blue, Brown, White, Gray} from "./colors.js"
+import {allColors} from "./colors.js"
 const button = document.querySelector("#btn")
 
 const color = document.querySelector(".color")
 
-const Red = ["IndianRed",
-  "LightCoral",
-  "Salmon",
-  "DarkSalmon",
-  "LightSalmon",
-  "Crimson",
- "Red",
- "FireBrick",
- "DarkRed"];
-const Pink = ["Pink",
-  "LightPink",
-  "HotPink",
-  "DeepPink",	
-  "MediumVioletRed",
-  "PaleVioletRed"];
-const Orange = ["LightSalmon",
-  "Coral",
-  "Tomato",
-  "OrangeRed",	
-  "DarkOrange",	
-  "Orange"];
-const Yellow = ["Gold",
-	"Yellow",
-	"LightYellow",
-	"LemonChiffon",
-	"LightGoldenrodYellow",
-	"PapayaWhip",
-	"Moccasin",
-	"PeachPuff",
-	"PaleGoldenrod",
-	"Khaki",
-	"DarkKhaki"];
-const Purple = ["Lavender",
-	"Thistle",
-	"Plum",
-	"Violet",
-	"Orchid",
-	"Fuchsia",
-	"Magenta",
-	"MediumOrchid",
-	"MediumPurple",
-	"RebeccaPurple",
-	"BlueViolet",
-	"DarkViolet",
-	"DarkOrchid",
-	"DarkMagenta",
-	"Purple",
-	"Indigo",
-	"SlateBlue",
-	"DarkSlateBlue",
-	"MediumSlateBlue"];
-const Green = ["GreenYellow",
-	"Chartreuse",
-	"LawnGreen",
-	"Lime",
-	"LimeGreen",
-	"PaleGreen",
-	"LightGreen",
-	"MediumSpringGreen",
-	"SpringGreen",
-	"MediumSeaGreen",
-	"SeaGreen",
-	"ForestGreen",
-	"Green",
-	"DarkGreen",
-	"YellowGreen",
-	"OliveDrab",
-	"Olive",
-	"DarkOliveGreen",
-	"MediumAquamarine",
-	"DarkSeaGreen",
-	"LightSeaGreen",
-	"DarkCyan",
-	"Teal"];
-const Blue = ["Aqua",	
-	"Cyan",
-	"LightCyan",
-	"PaleTurquoise",
-	"Aquamarine",
-	"Turquoise",
-	"MediumTurquoise",
-	"DarkTurquoise",
-	"CadetBlue",
-	"SteelBlue",
-	"LightSteelBlue",
-	"PowderBlue",
-	"LightBlue",
-	"SkyBlue",
-	"LightSkyBlue",
-	"DeepSkyBlue",
-	"DodgerBlue",
-	"CornflowerBlue",
-	"MediumSlateBlue",
-	"RoyalBlue",
-	"Blue",
-	"MediumBlue",
-	"DarkBlue",
-	"Navy",
-	"MidnightBlue"];
-const Brown = ["Cornsilk",
-	"BlanchedAlmond",
-	"Bisque",
-	"NavajoWhite",
-	"Wheat",
-	"BurlyWood",
-	"Tan",
-	"RosyBrown",
-	"SandyBrown",
-	"Goldenrod",
-	"DarkGoldenrod",
-	"Peru",
-	"Chocolate",
-	"SaddleBrown",
-	"Sienna",
-	"Brown",
-	"Maroon"];
-const White = ["White"	,
-	"Snow",
-	"HoneyDew",
-	"MintCream",
-	"Azure",
-	"AliceBlue",
-	"GhostWhite",
-	"WhiteSmoke",
-	"SeaShell",
-	"Beige",
-	"OldLace",
-	"FloralWhite",
-	"Ivory",
-	"AntiqueWhite",
-	"Linen",
-	"LavenderBlush",
-	"MistyRose"];
-const Gray = ["Gainsboro",
-	"LightGray",
-	"Silver",
-	"DarkGray",
-	"Gray",
-	"DimGray",
-	"LightSlateGray",
-	"SlateGray",
-	"DarkSlateGray",
-	"Black"];
-	const allColors = [...Red, ...Pink, ...Orange, ...Yellow, ...Purple, ...Green, ...Blue, ...Brown, ...White, ...Gray];;
-	button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
 	let hexColor = allColors[getRandomNumber()]
 	document.body.style.backgroundColor = hexColor
 	color.textContent = hexColor
@@ -154,26 +12,47 @@ const Gray = ["Gainsboro",
 	function getRandomNumber() {
 		return Math.floor(Math.random() * allColors.length);
 	  }
-	  const btnsTip = document.querySelectorAll(".btn1");
-	  let activeBtn = null;
-	  btnsTip.forEach((btnTip) => {
-		btnTip.addEventListener("click", (e) => {
-		  e.currentTarget.classList.add("active");
-		  if ((activeBtn === null && activeBtn !== e.currentTarget)) {
-			activeBtn.classList.remove("active");
-		  }
-		  activeBtn = e.currentTarget;
-		});
-	  });
-	
-	  
-    const redBtn = document.querySelector('RedBtn');
+    const redBtn = document.querySelector('btn1');
 	redBtn.addEventListener("click" , () => {
-		let hexColor = backgroundColor[getRandomNumber() * length.Red]
-		document.body.style.backgroundColor = hexColor
-	    color.textContent = hexColor
+		document.body.style.backgroundColor = Red*[Math.floor(Math.random() * Red.length)]
+	})
+	const pinkBtn = document.querySelector('btn2');
+	pinkBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Pink*[Math.floor(Math.random() * Pink.length)]
+	})
+	const orangeBtn = document.querySelector('btn3');
+	orangeBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Orange*[Math.floor(Math.random() * Orange.length)]
+	})
+	const yellowtnBtn = document.querySelector('btn4');
+	yellowtnBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Yellow*[Math.floor(Math.random() * Yellow.length)]
+	})
+	const purpleBtn = document.querySelector('btn5');
+	purpleBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Purple*[Math.floor(Math.random() * Purple.length)]
+	})
+	const greenBtn = document.querySelector('btn6');
+	greenBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Green*[Math.floor(Math.random() * Green.length)]
+	})
+	const blueBtn = document.querySelector('btn7');
+	blueBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Blue*[Math.floor(Math.random() * Blue.length)]
+	})
+	const brownBtn = document.querySelector('btn8');
+	brownBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Brown*[Math.floor(Math.random() * Brown.length)]
+	})
+	const whiteBtn = document.querySelector('btn9');
+	whiteBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = White*[Math.floor(Math.random() * White.length)]
+	})
+	const grayBtn = document.querySelector('btn10');
+	grayBtn.addEventListener("click" , () => {
+		document.body.style.backgroundColor = Gray*[Math.floor(Math.random() * Gray.length)]
 	})
 
 
-	
+
 
